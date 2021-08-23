@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         detectButton.setOnClickListener(v -> {
             Handler handler = new Handler();
-
             new Thread(() -> {
                 final List<Classifier.Recognition> results = detector.recognizeImage(cropBitmap);
                 handler.post(new Runnable() {
