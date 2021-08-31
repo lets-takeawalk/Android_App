@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
 import org.tensorflow.lite.examples.detection.customview.OverlayView;
 import org.tensorflow.lite.examples.detection.env.ImageUtils;
 import org.tensorflow.lite.examples.detection.env.Logger;
@@ -26,19 +27,27 @@ import org.tensorflow.lite.examples.detection.tflite.Classifier;
 import org.tensorflow.lite.examples.detection.tflite.YoloV4Classifier;
 import org.tensorflow.lite.examples.detection.tracking.MultiBoxTracker;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    String urlStr;
+    Handler handler = new Handler();
     public static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.5f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         cameraButton = findViewById(R.id.cameraButton);
         detectButton = findViewById(R.id.detectButton);
         imageView = findViewById(R.id.imageView);
@@ -46,17 +55,16 @@ public class MainActivity extends AppCompatActivity {
         cameraButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, DetectorActivity.class)));
 
         detectButton.setOnClickListener(v -> {
-            Handler handler = new Handler();
-            new Thread(() -> {
-                final List<Classifier.Recognition> results = detector.recognizeImage(cropBitmap);
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        handleResult(cropBitmap, results);
-                    }
-                });
-            }).start();
-
+            JSONObject testjson = new JSONObject();
+//                try{
+//                    urlStr = "http://ec2-3-35-14-61.ap-northeast-2.compute.amazonaws.com:3000/getInfo";
+//                    RequestThread thread = new RequestThread();
+//                    thread.start();
+//                }catch (Exception e) {
+//                e.printStackTrace();
+//            }
+            Intent intent2 = new Intent(MainActivity.this,DCameraActivity.class);
+            startActivity(intent2);
         });
         this.sourceBitmap = Utils.getBitmapFromAsset(MainActivity.this, "kite.jpg");
 
@@ -64,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         this.imageView.setImageBitmap(cropBitmap);
 
-        initBox();
+//        initBox();
     }
 
     private static final Logger LOGGER = new Logger();
@@ -73,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final boolean TF_OD_API_IS_QUANTIZED = false;
 
-    private static final String TF_OD_API_MODEL_FILE = "yolov4-416-fp32.tflite";
+    private static final String TF_OD_API_MODEL_FILE = "yolov4-tiny-416.tflite";
 
-    private static final String TF_OD_API_LABELS_FILE = "file:///android_asset/coco.txt";
+    private static final String TF_OD_API_LABELS_FILE = "coco.txt";
 
     // Minimum detection confidence to track a detection.
     private static final boolean MAINTAIN_ASPECT = false;
@@ -158,4 +166,48 @@ public class MainActivity extends AppCompatActivity {
 //        trackingOverlay.postInvalidate();
         imageView.setImageBitmap(bitmap);
     }
+    class RequestThread extends Thread{
+        public void run() {
+            try {
+                URL url = new URL(urlStr);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                if(conn != null){
+                    conn.setConnectTimeout(10000); // 10초 동안 기다린 후 응답이 없으면 종료
+                    conn.setRequestMethod("GET");
+                    conn.setDoInput(true);
+//                    conn.setDoOutput(true);
+                    int resCode = conn.getResponseCode();
+                    System.out.println(resCode);
+                    if(resCode == HttpURLConnection.HTTP_OK){
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                        String line = null;
+                        println("sd?");
+                        while(true){
+                            line = reader.readLine();
+                            println(line);
+                            if(line == null)
+                                break;
+                        }
+                        reader.close();
+                    }else{
+                        println("외안되?");
+                    }
+                    conn.disconnect();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void println(final String data){
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                System.out.print(data+"\n");
+                System.out.println("hunki");
+            }
+        });
+    }
+
+
 }
