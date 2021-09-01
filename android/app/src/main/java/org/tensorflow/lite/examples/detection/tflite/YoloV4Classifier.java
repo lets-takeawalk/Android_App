@@ -75,8 +75,8 @@ public class YoloV4Classifier implements Classifier {
             final boolean isQuantized)
             throws IOException {
         final YoloV4Classifier d = new YoloV4Classifier();
-
-        String actualFilename = labelFilename.split("file:///android_asset/")[1];
+        System.out.println(labelFilename);
+        String actualFilename = labelFilename.split("file:///android_asset/")[0];
         InputStream labelsInput = assetManager.open(actualFilename);
         BufferedReader br = new BufferedReader(new InputStreamReader(labelsInput));
         String line;

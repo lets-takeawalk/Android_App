@@ -55,14 +55,17 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import org.w3c.dom.Text;
 
-public class DCameraActivity extends Activity {
+public class DCameraActivity extends AppCompatActivity {
     private Button btnCapture;
+    private Button endCapture;
     private TextureView textureView;
+    private ArrayList imgList = new ArrayList();
     //Check state orientation of output image
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     static{
@@ -113,13 +116,21 @@ public class DCameraActivity extends Activity {
         assert  textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
         btnCapture = (Button) findViewById(R.id.btnCapture);
+        endCapture = (Button) findViewById(R.id.endCapture);
         btnCapture.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 takePicture();
             }
         });
+        endCapture.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                endPicture();
+            }
+        });
     }
+
 
     private void takePicture() {
         if(cameraDevice == null)
@@ -137,22 +148,24 @@ public class DCameraActivity extends Activity {
                 width = jpegSizes[0].getWidth();
                 height = jpegSizes[0].getHeight();
             }
-            ImageReader reader = ImageReader.newInstance(width,height,ImageFormat.JPEG,1);
+            final ImageReader reader = ImageReader.newInstance(width,height,ImageFormat.JPEG,1);
             List<Surface> outputSurface = new ArrayList<>(2);
             outputSurface.add(reader.getSurface());
             outputSurface.add(new Surface(textureView.getSurfaceTexture()));
 
-            CaptureRequest.Builder captureBulder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
-            captureBulder.addTarget(reader.getSurface());
-            captureBulder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO);
+            final CaptureRequest.Builder captureBuilder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
+            captureBuilder.addTarget(reader.getSurface());
+            captureBuilder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO);
             //Check orientation base on device
             int rotation = getWindowManager().getDefaultDisplay().getRotation();
-            captureBulder.set(CaptureRequest.JPEG_ORIENTATION,ORIENTATIONS.get(rotation));
+            captureBuilder.set(CaptureRequest.JPEG_ORIENTATION,ORIENTATIONS.get(rotation));
 
-            file = new File(Environment.getExternalStorageDirectory()+"/" +UUID.randomUUID().toString() + ".jpg");
+
+            file = new File(Environment.getExternalStorageDirectory()+"/"+UUID.randomUUID().toString()+".jpg");
+            imgList.add(file);
             ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
                 @Override
-                public void onImageAvailable(ImageReader reader) {
+                public void onImageAvailable(ImageReader imageReader) {
                     Image image = null;
                     try{
                         image = reader.acquireLatestImage();
@@ -160,11 +173,14 @@ public class DCameraActivity extends Activity {
                         byte[] bytes = new byte[buffer.capacity()];
                         buffer.get(bytes);
                         save(bytes);
+
                     }
-                    catch (FileNotFoundException e){
+                    catch (FileNotFoundException e)
+                    {
                         e.printStackTrace();
                     }
-                    catch (IOException e){
+                    catch (IOException e)
+                    {
                         e.printStackTrace();
                     }
                     finally {
@@ -174,12 +190,11 @@ public class DCameraActivity extends Activity {
                         }
                     }
                 }
-                private void save(byte[] bytes) throws IOException{
+                private void save(byte[] bytes) throws IOException {
                     OutputStream outputStream = null;
                     try{
                         outputStream = new FileOutputStream(file);
                         outputStream.write(bytes);
-
                     }finally {
                         if(outputStream != null)
                             outputStream.close();
@@ -200,7 +215,7 @@ public class DCameraActivity extends Activity {
                 @Override
                 public void onConfigured(@NonNull CameraCaptureSession session) {
                     try{
-                        session.capture(captureBulder.build(), captureListener, mBackgroundHandler);
+                        session.capture(captureBuilder.build(), captureListener, mBackgroundHandler);
 
                     }catch (CameraAccessException e){
                         e.printStackTrace();
@@ -338,5 +353,13 @@ public class DCameraActivity extends Activity {
         mBackgroundThread = new HandlerThread("Camera Background");
         mBackgroundThread.start();
         mBackgroundHandler = new Handler(mBackgroundThread.getLooper());
+    }
+
+    private void endPicture() {
+        Intent intent2 = new Intent(DCameraActivity.this,ImageChoiceActivity.class);
+        System.out.println(imgList.get(0));
+        intent2.putExtra("imglist",imgList);
+
+        startActivity(intent2);
     }
 }
