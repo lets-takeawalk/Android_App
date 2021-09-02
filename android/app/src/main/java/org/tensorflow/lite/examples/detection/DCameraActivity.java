@@ -357,9 +357,12 @@ public class DCameraActivity extends AppCompatActivity {
 
     private void endPicture() {
         Intent intent2 = new Intent(DCameraActivity.this,ImageChoiceActivity.class);
-        System.out.println(imgList.get(0));
         intent2.putExtra("imglist",imgList);
-
+        if(imgList.size() == 0){
+            Toast.makeText(this.getApplicationContext(), "사진이 없습니다.",Toast.LENGTH_SHORT).show();
+            return;
+        }
         startActivity(intent2);
+        imgList = new ArrayList();
     }
 }
