@@ -166,7 +166,7 @@ public class DCameraActivity extends AppCompatActivity {
 
             file = new File(fpath + fname);
             imgList.add(file);
-            nameList.add(fpath);
+            nameList.add(fname);
             ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
                 @Override
                 public void onImageAvailable(ImageReader imageReader) {

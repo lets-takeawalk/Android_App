@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -31,10 +32,13 @@ import java.util.ArrayList;
 import static java.lang.System.exit;
 
 public class ImageChoiceActivity extends AppCompatActivity {
-    ArrayList array = new ArrayList();
-    ArrayList<String> narray = new ArrayList<String>();
+    ArrayList array = new ArrayList(); // 그 이미지 어레이
+    ArrayList xyarray = new ArrayList<String>();
+    ArrayList<String> narray = new ArrayList<String>(); // 그 이름 들어간 어레이
     BitmapFactory.Options options = new BitmapFactory.Options();
     ImageView imageView2;
+    EditText keditText;
+    EditText eeditText;
     int touchCnt = 0;
     int arrayCnt = 0;
     float mx = 0;
@@ -65,10 +69,13 @@ public class ImageChoiceActivity extends AppCompatActivity {
 
     private void Touchimg() {
         if (array.size() == arrayCnt){
+            System.out.println(xyarray.get(0)+ eeditText.getText().toString() + keditText.getText().toString()+xyarray.size());
             System.exit(0);
         }
 
         imageView2 = findViewById(R.id.imageView2);
+        keditText = findViewById(R.id.editText2);
+        eeditText = findViewById(R.id.editText);
         // array 가져오기
         File img = (File) array.get(arrayCnt);
         //imageview에 저장하는과정..
@@ -101,6 +108,8 @@ public class ImageChoiceActivity extends AppCompatActivity {
                     case MotionEvent.ACTION_DOWN:
                         float X = event.getX() *(416/(mmx-mx));
                         float Y = event.getY() *(416/(mmy-my));
+                        String XY = Float.toString(X) + " " + Float.toString(Y);
+                        xyarray.add(XY);
                         System.out.println(X +" "+ Y);
                         touchCnt ++;
                         if(touchCnt==2){
@@ -120,6 +129,8 @@ public class ImageChoiceActivity extends AppCompatActivity {
         StorageReference storageRef = storage.getReference();
         StorageReference mountainsRef = storageRef.child(narray.get(arrayCnt));
         StorageReference mountainImagesRef = storageRef.child("images/" + narray.get(arrayCnt));
+        System.out.println(narray.get(arrayCnt));
+        //기본셋팅
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         rotatedBitmap.compress(Bitmap.CompressFormat.JPEG,100,baos);

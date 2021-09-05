@@ -6,9 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".ImageChoiceActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageView2"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="한글 이름 입력"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="영어 이름 입력"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="416dp"
         android:layout_height="416dp"
         tools:srcCompat="@tools:sample/backgrounds/scenic[0]" />
+
 </RelativeLayout>
