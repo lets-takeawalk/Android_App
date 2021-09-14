@@ -3,13 +3,16 @@
     package="org.tensorflow.lite.examples.detection">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.location.gps" />
 
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.hardware.camera2.full" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -23,6 +26,7 @@
         android:theme="@style/AppTheme.ObjectDetection"
         android:usesCleartextTraffic="true">
         <activity android:name=".ImageChoiceActivity"></activity>
+
         <activity
             android:name=".DCameraActivity"
             android:label="@string/title_activity_dcamera"

@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     String urlStr;
     Handler handler = new Handler();
     public static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.5f;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

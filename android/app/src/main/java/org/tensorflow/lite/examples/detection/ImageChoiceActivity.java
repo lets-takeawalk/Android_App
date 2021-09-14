@@ -31,10 +31,14 @@ import java.util.ArrayList;
 
 import static java.lang.System.exit;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class ImageChoiceActivity extends AppCompatActivity {
     ArrayList array = new ArrayList(); // 그 이미지 어레이
-    ArrayList xyarray = new ArrayList<String>();
-    ArrayList<String> narray = new ArrayList<String>(); // 그 이름 들어간 어레이
+    ArrayList xyarray = new ArrayList<String>();//좌표 어레이
+    ArrayList<String> narray = new ArrayList<String>(); // 이름 이미지 들어간 어레이
     BitmapFactory.Options options = new BitmapFactory.Options();
     ImageView imageView2;
     EditText keditText;
@@ -69,7 +73,7 @@ public class ImageChoiceActivity extends AppCompatActivity {
 
     private void Touchimg() {
         if (array.size() == arrayCnt){
-            System.out.println(xyarray.get(0)+ eeditText.getText().toString() + keditText.getText().toString()+xyarray.size());
+            jsonCreate();
             System.exit(0);
         }
 
@@ -86,7 +90,7 @@ public class ImageChoiceActivity extends AppCompatActivity {
         Bitmap rotatedBitmap = Bitmap.createBitmap(resize,0,0,resize.getWidth(),resize.getHeight(),matrix,true); // 416,416 and rotate90
 //        System.out.println(resize.getWidth()+" " +resize.getHeight());
 //        saveBitmapToJpg(resize,"imghyn");
-
+        //416 416으로 저장
 
         imageView2.setImageBitmap(rotatedBitmap);
 
@@ -95,12 +99,11 @@ public class ImageChoiceActivity extends AppCompatActivity {
     }
 
     private void configImgview(Bitmap rotatedBitmap){
-        float mx = imageView2.getX();
-        float my = imageView2.getY();
-        float mmx = imageView2.getWidth();
-        float mmy = imageView2.getHeight();
-        System.out.println(mx + " " + my);
-        System.out.println(mmx + " " + mmy);
+        mx = imageView2.getX();
+        my = imageView2.getY();
+        mmx = imageView2.getWidth();
+        mmy = imageView2.getHeight();
+
         imageView2.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -147,6 +150,61 @@ public class ImageChoiceActivity extends AppCompatActivity {
             }
         });
     }
-
-
+    public void jsonCreate(){
+        JSONObject obj = new JSONObject();
+        try{
+            JSONArray jArray = new JSONArray(); //pcis에서 배열로 쓸 예정
+            JSONArray jArray2 = new JSONArray(); // building을 만들기위해 쓸것
+            //안써버렸네
+            for (int i = 0; i<narray.size(); i++){
+                int coornum = 2*i; // 좌표 두개씩
+                String xy1 = (String) xyarray.get(coornum);
+                String xy2 = (String) xyarray.get(coornum+1);
+                //먼저 좌표 불러오기 top, bottom
+                String[] t = xy1.split(" ");
+                String[] b = xy2.split(" ");
+                // 쪼개기 띄어쓰기로 되어있어서 왼쪽이 x 오른쪽이 y
+                String x_t = t[0];
+                String y_t = t[1];
+                //xy 위쪽
+                String x_b = b[0];
+                String y_b = b[1];
+                //xy 아래쪽
+                JSONObject sObject =  new JSONObject(); // 배열 내에 들어갈 json
+                sObject.put("imgId", Integer.toString(i));
+                sObject.put("imgURL", narray.get(i));
+                sObject.put("angle","");
+                sObject.put("x_t",x_t);
+                sObject.put("y_t",y_t);
+                sObject.put("x_b",x_b);
+                sObject.put("y_b",y_b);
+                jArray.put(sObject);
+            }
+            //img array 배열생성 완료
+            JSONObject bObj = new JSONObject();
+            bObj.put("buildingNameKor", keditText.getText().toString());
+            bObj.put("buildingNameEng",eeditText.getText().toString());
+            bObj.put("picCount", Integer.toString(narray.size()));
+            //building obj 생성 완료
+            obj.put("buildingInfo",bObj); // 빌딩 Object 박아버림
+            obj.put("pics",jArray); // 배열을 박아버림
+            System.out.println(obj.toString());
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+    }
+    public class buildingData{
+        String kName;
+        String eName;
+        String pCount;
+    }
+    public class imgInfo{
+        String imgId;
+        String imgURL;
+        String angle;
+        String x_t;
+        String y_t;
+        String x_b;
+        String y_b;
+    }
 }
