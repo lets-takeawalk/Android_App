@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "621171836415",
+    "project_id": "let-s-take-a-walk-76161",
+    "storage_bucket": "let-s-take-a-walk-76161.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621171836415:android:9f6c229ca6dcef5c4f53ca",
+        "android_client_info": {
+          "package_name": "org.tensorflow.lite.examples.detection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621171836415-ilr9ihgd12du0j08t7ck4l95j93jgr8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWbG-hX8X-8hcivJ7Mb2vv3I1jiVdMGO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621171836415-ilr9ihgd12du0j08t7ck4l95j93jgr8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
