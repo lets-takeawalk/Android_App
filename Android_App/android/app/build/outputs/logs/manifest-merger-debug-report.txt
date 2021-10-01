@@ -1,0 +1,509 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:1-56:12
+MERGED from [androidx.navigation:navigation-ui:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\fbd82cc1f9a4998a44278f99e662f5c5\navigation-ui-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\955b55c3d916391a6b5b8785f96fd621\material-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\c12111b26edfaa82c61de7a3ee63c8a5\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6ebf3c3f5175e6b8d99e5424d61b56fb\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [org.tensorflow:tensorflow-lite:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\119e2cf92a76d721d5b9a99ef709b413\jetified-tensorflow-lite-2.2.0\AndroidManifest.xml:2:1-12:12
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\31842f15dba4864c24e1d3ae52f1ff29\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8aefca5a2c6d162e3feeb4c9b9cd07df\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\fe31647c6dc84a7dde677286bc62741d\jetified-volley-1.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f1fc19ece13d98a3eff037df76f620b6\navigation-fragment-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\aee85f2e4a45de856c497ad5ec028103\jetified-firebase-analytics-19.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\b6e29ec3ca90ca136a3353dc13973eba\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta01] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f0ea84576498ec12f1c2bd45ba3c6b9e\jetified-firebase-appcheck-interop-16.0.0-beta01\AndroidManifest.xml:15:1-26:12
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2f06f7340b0b271e70b91739a1e044b1\jetified-firebase-auth-interop-18.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:15:1-40:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\02e677f5771fb1b1d484e325134ab1de\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8100e522ee3bf9e851e032ade47168c1\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\3f79d997b9c56a55b61e67d3f49e045e\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\668a133741cae57d42a0ae37ce798818\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\933dcc1796e0a5345d60f1345cf9e214\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\88382a788c108e1ca86511b72e6d342d\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6751a88ddc01668a75bee0d56c4aaeb4\jetified-play-services-base-17.1.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\7771f8cb9d4de425d7303edf6665fc0f\jetified-firebase-installations-interop-17.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\768ba3e33cb64710fe62aeb1b7acc8a7\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\ea102e50b9a208e7535a3592883f8751\jetified-play-services-measurement-sdk-19.0.1\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\98af8984ca7384af8548e9a69b0b1afe\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f7d2e08629dc40c00acf68eefe9a0665\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\bcf9df90621f3d74a41937e2c5de3b33\jetified-play-services-measurement-base-19.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\39e6465ef935fad6aa5b161297794a84\jetified-play-services-stats-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a5aa5cf5b5635a6556cd1e8b8ad16ef8\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\624736b9c159ac227446c199a18f5fe9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8da97f3b4f367c22ae511fab0b8196fa\fragment-1.2.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\92d518725d84da7763484092c99670d4\drawerlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2151c61225a2eb11d15180ec2f6b069a\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\d6bc70ffadeae6df21947ff493b13258\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\237927f856c7d12b80d56c55eb4b7f9a\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\57ba903639725cb1157e525750597285\transition-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\63c71ced837ffaa9e0e6b799b07855e8\jetified-firebase-components-17.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\460d31b5d9407b51baf49db5922faeca\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\dfa4fb5cd1c488e64c6311797d33db3c\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\3a1fc7f8ab519a3a7fb938e31651153f\navigation-runtime-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\e81b57403de609035d4df8efdec3d1b8\navigation-common-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\92fe557d8964b5400555ef45021783d3\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\e25ba379877bcb13e523258e263b8e5b\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5eda76330cf0ad018c0a75f0298d35dc\jetified-activity-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\88e882fde7a1c9ad3e09d2ec087a9366\core-1.3.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\849a110f1ea5d2bd015d6a5861eb4837\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a5bd86dd0a7c13260570de767a51a4e6\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\3deb0b20cf500d16cc1d3a9ce2f5ae8e\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\86954d5b73177bbbfbb0fa324329f22f\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2f461971b77879b0a8c43df65c139934\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\1b9b5e83f6a8b4ea34dbbe05481a98e6\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6fff3e1a045695ab15d68adb0c1b566c\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f191cef20f85a75eb7a3f7e89693782e\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\cb69bf26fba06ec70ede38e8eb5f0bc1\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\b4f341d117f94e71a5c4a19d74f44dfc\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\ca367436a55768758d6fba8e4f4d2a02\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\0e91e6fd5002d972994e008cb79eb760\print-1.0.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:1-56:12
+	package
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:3:5-53
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:1-56:12
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:1-56:12
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:5:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:6:5-7:37
+	android:maxSdkVersion
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:7:9-35
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.ACCESS_MEDIA_LOCATION
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:8:22-77
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:9:22-77
+uses-permission#android.permission.location.gps
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:10:5-71
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:10:22-68
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:12:5-70
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:12:19-67
+uses-permission#android.hardware.camera2.full
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:14:5-69
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:14:22-66
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:16:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f7d2e08629dc40c00acf68eefe9a0665\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f7d2e08629dc40c00acf68eefe9a0665\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:16:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:17:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f7d2e08629dc40c00acf68eefe9a0665\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f7d2e08629dc40c00acf68eefe9a0665\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:17:22-76
+application
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:19:5-54:19
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\955b55c3d916391a6b5b8785f96fd621\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\955b55c3d916391a6b5b8785f96fd621\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [org.tensorflow:tensorflow-lite:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\119e2cf92a76d721d5b9a99ef709b413\jetified-tensorflow-lite-2.2.0\AndroidManifest.xml:10:5-20
+MERGED from [org.tensorflow:tensorflow-lite:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\119e2cf92a76d721d5b9a99ef709b413\jetified-tensorflow-lite-2.2.0\AndroidManifest.xml:10:5-20
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\31842f15dba4864c24e1d3ae52f1ff29\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:10:5-20
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\31842f15dba4864c24e1d3ae52f1ff29\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:10:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8aefca5a2c6d162e3feeb4c9b9cd07df\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8aefca5a2c6d162e3feeb4c9b9cd07df\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\fe31647c6dc84a7dde677286bc62741d\jetified-volley-1.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\fe31647c6dc84a7dde677286bc62741d\jetified-volley-1.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\aee85f2e4a45de856c497ad5ec028103\jetified-firebase-analytics-19.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\aee85f2e4a45de856c497ad5ec028103\jetified-firebase-analytics-19.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:29:5-37:19
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\b6e29ec3ca90ca136a3353dc13973eba\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\b6e29ec3ca90ca136a3353dc13973eba\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta01] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f0ea84576498ec12f1c2bd45ba3c6b9e\jetified-firebase-appcheck-interop-16.0.0-beta01\AndroidManifest.xml:24:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta01] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f0ea84576498ec12f1c2bd45ba3c6b9e\jetified-firebase-appcheck-interop-16.0.0-beta01\AndroidManifest.xml:24:5-20
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2f06f7340b0b271e70b91739a1e044b1\jetified-firebase-auth-interop-18.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2f06f7340b0b271e70b91739a1e044b1\jetified-firebase-auth-interop-18.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:14:5-22:19
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:14:5-22:19
+MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6751a88ddc01668a75bee0d56c4aaeb4\jetified-play-services-base-17.1.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6751a88ddc01668a75bee0d56c4aaeb4\jetified-play-services-base-17.1.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\768ba3e33cb64710fe62aeb1b7acc8a7\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\768ba3e33cb64710fe62aeb1b7acc8a7\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\ea102e50b9a208e7535a3592883f8751\jetified-play-services-measurement-sdk-19.0.1\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\ea102e50b9a208e7535a3592883f8751\jetified-play-services-measurement-sdk-19.0.1\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\98af8984ca7384af8548e9a69b0b1afe\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\98af8984ca7384af8548e9a69b0b1afe\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\bcf9df90621f3d74a41937e2c5de3b33\jetified-play-services-measurement-base-19.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\bcf9df90621f3d74a41937e2c5de3b33\jetified-play-services-measurement-base-19.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\39e6465ef935fad6aa5b161297794a84\jetified-play-services-stats-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\39e6465ef935fad6aa5b161297794a84\jetified-play-services-stats-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a5aa5cf5b5635a6556cd1e8b8ad16ef8\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a5aa5cf5b5635a6556cd1e8b8ad16ef8\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\624736b9c159ac227446c199a18f5fe9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\624736b9c159ac227446c199a18f5fe9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\460d31b5d9407b51baf49db5922faeca\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\460d31b5d9407b51baf49db5922faeca\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\88e882fde7a1c9ad3e09d2ec087a9366\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\88e882fde7a1c9ad3e09d2ec087a9366\core-1.3.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\849a110f1ea5d2bd015d6a5861eb4837\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\849a110f1ea5d2bd015d6a5861eb4837\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\88e882fde7a1c9ad3e09d2ec087a9366\core-1.3.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:25:9-35
+	android:label
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:22:9-48
+	android:roundIcon
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:24:9-54
+	android:icon
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:21:9-43
+	android:allowBackup
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:20:9-36
+	android:theme
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:26:9-56
+	android:networkSecurityConfig
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:23:9-69
+	android:usesCleartextTraffic
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:27:9-44
+activity#org.tensorflow.lite.examples.detection.ImageChoiceActivity
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:28:9-66
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:28:19-54
+activity#org.tensorflow.lite.examples.detection.DCameraActivity
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:30:9-33:75
+	android:label
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:32:13-59
+	android:theme
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:33:13-72
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:31:13-44
+meta-data#com.google.android.actions
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:35:9-37:63
+	android:resource
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:37:13-60
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:36:13-54
+activity#org.tensorflow.lite.examples.detection.CamTestActivity
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:39:9-42:52
+	android:screenOrientation
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:42:13-49
+	android:label
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:41:13-33
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:40:13-44
+activity#org.tensorflow.lite.examples.detection.DetectorActivity
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:43:9-46:52
+	android:screenOrientation
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:46:13-49
+	android:label
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:45:13-52
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:44:13-45
+activity#org.tensorflow.lite.examples.detection.MainActivity
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:47:9-53:20
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:47:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:48:13-52:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:49:17-69
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:49:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:51:17-77
+	android:name
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml:51:27-74
+uses-sdk
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+MERGED from [androidx.navigation:navigation-ui:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\fbd82cc1f9a4998a44278f99e662f5c5\navigation-ui-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\fbd82cc1f9a4998a44278f99e662f5c5\navigation-ui-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\955b55c3d916391a6b5b8785f96fd621\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\955b55c3d916391a6b5b8785f96fd621\material-1.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\c12111b26edfaa82c61de7a3ee63c8a5\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\c12111b26edfaa82c61de7a3ee63c8a5\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6ebf3c3f5175e6b8d99e5424d61b56fb\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6ebf3c3f5175e6b8d99e5424d61b56fb\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [org.tensorflow:tensorflow-lite:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\119e2cf92a76d721d5b9a99ef709b413\jetified-tensorflow-lite-2.2.0\AndroidManifest.xml:7:5-8:41
+MERGED from [org.tensorflow:tensorflow-lite:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\119e2cf92a76d721d5b9a99ef709b413\jetified-tensorflow-lite-2.2.0\AndroidManifest.xml:7:5-8:41
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\31842f15dba4864c24e1d3ae52f1ff29\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:7:5-8:41
+MERGED from [org.tensorflow:tensorflow-lite-gpu:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\31842f15dba4864c24e1d3ae52f1ff29\jetified-tensorflow-lite-gpu-2.2.0\AndroidManifest.xml:7:5-8:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8aefca5a2c6d162e3feeb4c9b9cd07df\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8aefca5a2c6d162e3feeb4c9b9cd07df\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\fe31647c6dc84a7dde677286bc62741d\jetified-volley-1.1.0\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\fe31647c6dc84a7dde677286bc62741d\jetified-volley-1.1.0\AndroidManifest.xml:7:5-43
+MERGED from [androidx.navigation:navigation-fragment:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f1fc19ece13d98a3eff037df76f620b6\navigation-fragment-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f1fc19ece13d98a3eff037df76f620b6\navigation-fragment-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\aee85f2e4a45de856c497ad5ec028103\jetified-firebase-analytics-19.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\aee85f2e4a45de856c497ad5ec028103\jetified-firebase-analytics-19.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\b6e29ec3ca90ca136a3353dc13973eba\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\b6e29ec3ca90ca136a3353dc13973eba\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta01] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f0ea84576498ec12f1c2bd45ba3c6b9e\jetified-firebase-appcheck-interop-16.0.0-beta01\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta01] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f0ea84576498ec12f1c2bd45ba3c6b9e\jetified-firebase-appcheck-interop-16.0.0-beta01\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2f06f7340b0b271e70b91739a1e044b1\jetified-firebase-auth-interop-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2f06f7340b0b271e70b91739a1e044b1\jetified-firebase-auth-interop-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\02e677f5771fb1b1d484e325134ab1de\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\02e677f5771fb1b1d484e325134ab1de\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8100e522ee3bf9e851e032ade47168c1\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8100e522ee3bf9e851e032ade47168c1\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\3f79d997b9c56a55b61e67d3f49e045e\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\3f79d997b9c56a55b61e67d3f49e045e\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\668a133741cae57d42a0ae37ce798818\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\668a133741cae57d42a0ae37ce798818\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\933dcc1796e0a5345d60f1345cf9e214\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\933dcc1796e0a5345d60f1345cf9e214\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\88382a788c108e1ca86511b72e6d342d\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\88382a788c108e1ca86511b72e6d342d\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6751a88ddc01668a75bee0d56c4aaeb4\jetified-play-services-base-17.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6751a88ddc01668a75bee0d56c4aaeb4\jetified-play-services-base-17.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\7771f8cb9d4de425d7303edf6665fc0f\jetified-firebase-installations-interop-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\7771f8cb9d4de425d7303edf6665fc0f\jetified-firebase-installations-interop-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\768ba3e33cb64710fe62aeb1b7acc8a7\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\768ba3e33cb64710fe62aeb1b7acc8a7\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\ea102e50b9a208e7535a3592883f8751\jetified-play-services-measurement-sdk-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\ea102e50b9a208e7535a3592883f8751\jetified-play-services-measurement-sdk-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\98af8984ca7384af8548e9a69b0b1afe\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\98af8984ca7384af8548e9a69b0b1afe\jetified-play-services-ads-identifier-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f7d2e08629dc40c00acf68eefe9a0665\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f7d2e08629dc40c00acf68eefe9a0665\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\bcf9df90621f3d74a41937e2c5de3b33\jetified-play-services-measurement-base-19.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\bcf9df90621f3d74a41937e2c5de3b33\jetified-play-services-measurement-base-19.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\39e6465ef935fad6aa5b161297794a84\jetified-play-services-stats-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\39e6465ef935fad6aa5b161297794a84\jetified-play-services-stats-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a5aa5cf5b5635a6556cd1e8b8ad16ef8\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a5aa5cf5b5635a6556cd1e8b8ad16ef8\jetified-firebase-measurement-connector-19.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\624736b9c159ac227446c199a18f5fe9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\624736b9c159ac227446c199a18f5fe9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8da97f3b4f367c22ae511fab0b8196fa\fragment-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\8da97f3b4f367c22ae511fab0b8196fa\fragment-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\92d518725d84da7763484092c99670d4\drawerlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\92d518725d84da7763484092c99670d4\drawerlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2151c61225a2eb11d15180ec2f6b069a\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2151c61225a2eb11d15180ec2f6b069a\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\d6bc70ffadeae6df21947ff493b13258\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\d6bc70ffadeae6df21947ff493b13258\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\237927f856c7d12b80d56c55eb4b7f9a\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\237927f856c7d12b80d56c55eb4b7f9a\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\57ba903639725cb1157e525750597285\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\57ba903639725cb1157e525750597285\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\63c71ced837ffaa9e0e6b799b07855e8\jetified-firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\63c71ced837ffaa9e0e6b799b07855e8\jetified-firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\460d31b5d9407b51baf49db5922faeca\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\460d31b5d9407b51baf49db5922faeca\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\dfa4fb5cd1c488e64c6311797d33db3c\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\dfa4fb5cd1c488e64c6311797d33db3c\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\3a1fc7f8ab519a3a7fb938e31651153f\navigation-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\3a1fc7f8ab519a3a7fb938e31651153f\navigation-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\e81b57403de609035d4df8efdec3d1b8\navigation-common-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\e81b57403de609035d4df8efdec3d1b8\navigation-common-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\92fe557d8964b5400555ef45021783d3\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\92fe557d8964b5400555ef45021783d3\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\e25ba379877bcb13e523258e263b8e5b\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\e25ba379877bcb13e523258e263b8e5b\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5eda76330cf0ad018c0a75f0298d35dc\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5eda76330cf0ad018c0a75f0298d35dc\jetified-activity-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\88e882fde7a1c9ad3e09d2ec087a9366\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\88e882fde7a1c9ad3e09d2ec087a9366\core-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\849a110f1ea5d2bd015d6a5861eb4837\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\849a110f1ea5d2bd015d6a5861eb4837\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a5bd86dd0a7c13260570de767a51a4e6\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a5bd86dd0a7c13260570de767a51a4e6\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\3deb0b20cf500d16cc1d3a9ce2f5ae8e\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\3deb0b20cf500d16cc1d3a9ce2f5ae8e\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\86954d5b73177bbbfbb0fa324329f22f\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\86954d5b73177bbbfbb0fa324329f22f\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2f461971b77879b0a8c43df65c139934\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\2f461971b77879b0a8c43df65c139934\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\1b9b5e83f6a8b4ea34dbbe05481a98e6\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\1b9b5e83f6a8b4ea34dbbe05481a98e6\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6fff3e1a045695ab15d68adb0c1b566c\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6fff3e1a045695ab15d68adb0c1b566c\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f191cef20f85a75eb7a3f7e89693782e\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f191cef20f85a75eb7a3f7e89693782e\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\cb69bf26fba06ec70ede38e8eb5f0bc1\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\cb69bf26fba06ec70ede38e8eb5f0bc1\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\b4f341d117f94e71a5c4a19d74f44dfc\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\b4f341d117f94e71a5c4a19d74f44dfc\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\ca367436a55768758d6fba8e4f4d2a02\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\ca367436a55768758d6fba8e4f4d2a02\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\0e91e6fd5002d972994e008cb79eb760\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\0e91e6fd5002d972994e008cb79eb760\print-1.0.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+		MERGED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+		MERGED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Hunki\Desktop\zxc\Android_App\android\app\src\main\AndroidManifest.xml
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:15:9-21:19
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:15:9-21:19
+MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:33:9-37:35
+MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:33:9-37:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:32:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:37:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:31:13-84
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\5ffa90048bf30c3c8ea4303ae60f4330\jetified-firebase-storage-20.0.0\AndroidManifest.xml:34:17-107
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f7d2e08629dc40c00acf68eefe9a0665\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\f7d2e08629dc40c00acf68eefe9a0665\jetified-play-services-measurement-sdk-api-19.0.1\AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:24:22-65
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4bdca7cb8cdeb9ae1a0781219ee5d2a4\jetified-play-services-measurement-api-19.0.1\AndroidManifest.xml:31:17-139
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\4b544264fc95d3fbabb8343605281176\jetified-firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\67d121e23833519f798dbcee96966a17\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6751a88ddc01668a75bee0d56c4aaeb4\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6751a88ddc01668a75bee0d56c4aaeb4\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6751a88ddc01668a75bee0d56c4aaeb4\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\6751a88ddc01668a75bee0d56c4aaeb4\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\451c8ef72a1cb579d3fa16b1c22320a8\jetified-play-services-measurement-impl-19.0.1\AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:30:13-85
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:35:9-38:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:38:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:36:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:39:9-43:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:41:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:42:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:43:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\a1d80b46b5cd9f6d21f56c51039df7e5\jetified-play-services-measurement-19.0.1\AndroidManifest.xml:40:13-87
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\624736b9c159ac227446c199a18f5fe9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\624736b9c159ac227446c199a18f5fe9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Hunki\.gradle\caches\transforms-2\files-2.1\624736b9c159ac227446c199a18f5fe9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
