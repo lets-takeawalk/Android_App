@@ -412,4 +412,5 @@ public class DCameraActivity extends AppCompatActivity {
         imgList = new ArrayList();
         nameList = new ArrayList<String>();
     }
+
 }

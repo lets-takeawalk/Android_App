@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
         cameraButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, DetectorActivity.class)));
 
         detectButton.setOnClickListener(v -> {
-            JSONObject testjson = new JSONObject();
+//            JSONObject testjson = new JSONObject();
 //                try{
-//                    urlStr = "http://ec2-3-35-14-61.ap-northeast-2.compute.amazonaws.com:3000/getInfo";
+//                    urlStr = "http://ec2-13-124-11-51.ap-northeast-2.compute.amazonaws.com:3000/getInfo";
 //                    RequestThread thread = new RequestThread();
 //                    thread.start();
 //                }catch (Exception e) {
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 //        trackingOverlay.postInvalidate();
         imageView.setImageBitmap(bitmap);
     }
-    class RequestThread extends Thread{
+    private class RequestThread extends Thread{
         public void run() {
             try {
                 URL url = new URL(urlStr);
