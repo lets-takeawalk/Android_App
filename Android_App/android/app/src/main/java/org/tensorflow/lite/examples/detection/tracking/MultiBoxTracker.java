@@ -219,7 +219,7 @@ public class MultiBoxTracker {
       trackedRecognition.color = COLORS[trackedObjects.size()];
       trackedObjects.add(trackedRecognition);
 
-      if (trackedObjects.size() >= COLORS.length) {
+      if (trackedObjects.size() >= 1) {
         break;
       }
     }

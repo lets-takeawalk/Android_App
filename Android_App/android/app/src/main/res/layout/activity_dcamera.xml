@@ -17,14 +17,20 @@
         android:id="@+id/btnCapture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
         android:layout_alignParentBottom="true"
-        android:text="CAPTURE" />
+        android:layout_marginLeft="100dp"
+        android:background="#354A15"
+        android:text="CAPTURE"
+        android:textColor="#C1DDF4"
+        android:textColorHint="#90B5DB" />
 
     <Button
         android:id="@+id/endCapture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#354A15"
+        android:textColor="#C1DDF4"
+        android:textColorHint="#90B5DB"
         android:layout_alignParentBottom="true"
         android:text="End" />
 

@@ -13,6 +13,7 @@ import android.util.Log;
 import org.tensorflow.lite.examples.detection.MainActivity;
 
 import java.io.File;
+import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -26,14 +27,18 @@ public class Utils {
     /**
      * Memory-map the model file in Assets.
      */
-    public static MappedByteBuffer loadModelFile(AssetManager assets, String modelFilename)
+    public static MappedByteBuffer loadModelFile(AssetManager assets, String modelFilename, FileInputStream tf)
             throws IOException {
-        AssetFileDescriptor fileDescriptor = assets.openFd(modelFilename);
-        FileInputStream inputStream = new FileInputStream(fileDescriptor.getFileDescriptor());
-        FileChannel fileChannel = inputStream.getChannel();
-        long startOffset = fileDescriptor.getStartOffset();
-        long declaredLength = fileDescriptor.getDeclaredLength();
-        return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
+//        AssetFileDescriptor fileDescriptor = assets.openFd(modelFilename);
+        FileDescriptor fileDescriptor = tf.getFD();
+//        FileInputStream inputStream = new FileInputStream(fileDescriptor.getFileDescriptor());
+//        FileChannel fileChannel = inputStream.getChannel();
+        FileInputStream inputStream = new FileInputStream(fileDescriptor);
+        FileChannel fileChannel = tf.getChannel();
+//        long startOffset = fileDescriptor.getStartOffset();
+//        long declaredLength = fileDescriptor.getDeclaredLength();
+
+        return fileChannel.map(FileChannel.MapMode.READ_ONLY, fileChannel.position(), fileChannel.size());
     }
 
     public static void softmax(final float[] vals) {

@@ -12,15 +12,19 @@ limitations under the License.
 
 package org.tensorflow.lite.examples.detection.tflite;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.RectF;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Trace;
 import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -38,12 +42,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.tensorflow.lite.Interpreter;
+import org.tensorflow.lite.examples.detection.ImageChoiceActivity;
 import org.tensorflow.lite.examples.detection.MainActivity;
 import org.tensorflow.lite.examples.detection.env.Logger;
 import org.tensorflow.lite.examples.detection.env.Utils;
 
 import static org.tensorflow.lite.examples.detection.env.Utils.expit;
 import static org.tensorflow.lite.examples.detection.env.Utils.softmax;
+import android.content.Context;
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.gpu.GpuDelegate;
@@ -68,17 +78,28 @@ public class YoloV4Classifier implements Classifier {
      * @param labelFilename The filepath of label file for classes.
      * @param isQuantized   Boolean representing model is quantized or not
      */
+
     public static Classifier create(
             final AssetManager assetManager,
             final String modelFilename,
             final String labelFilename,
+            final FileInputStream labelFileinput,
+            final FileInputStream modelFileinput,
             final boolean isQuantized)
             throws IOException {
+//        FirebaseStorage storage = FirebaseStorage.getInstance("gs://let-s-take-a-walk-76161.appspot.com");
+//        StorageReference model = storage.getReference(modelFilename);
+//        StorageReference label = storage.getReference(labelFilename);
+
         final YoloV4Classifier d = new YoloV4Classifier();
         System.out.println(labelFilename);
-        String actualFilename = labelFilename.split("file:///android_asset/")[0];
-        InputStream labelsInput = assetManager.open(actualFilename);
-        BufferedReader br = new BufferedReader(new InputStreamReader(labelsInput));
+
+//        String actualFilename = labelFilename.split("file:///android_asset/")[0];
+
+//        System.out.println(actualFilename+" 액츄얼파일네임");
+//        InputStream labelsInput = assetManager.open(actualFilename);
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(labelFileinput));
         String line;
         while ((line = br.readLine()) != null) {
             LOGGER.w(line);
@@ -106,7 +127,8 @@ public class YoloV4Classifier implements Classifier {
                 GpuDelegate gpuDelegate = new GpuDelegate();
                 options.addDelegate(gpuDelegate);
             }
-            d.tfLite = new Interpreter(Utils.loadModelFile(assetManager, modelFilename), options);
+
+            d.tfLite = new Interpreter(Utils.loadModelFile(assetManager, modelFilename, modelFileinput), options);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

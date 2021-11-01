@@ -16,6 +16,7 @@
 
 package org.tensorflow.lite.examples.detection;
 
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -26,6 +27,7 @@ import android.graphics.Paint.Style;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.media.ImageReader.OnImageAvailableListener;
+import android.net.Uri;
 import android.os.SystemClock;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
@@ -33,7 +35,20 @@ import android.util.Size;
 import android.util.TypedValue;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -57,7 +72,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
     private static final boolean TF_OD_API_IS_QUANTIZED = false;
     private static final String TF_OD_API_MODEL_FILE = "yolov4-tiny-416.tflite";
 
-    private static final String TF_OD_API_LABELS_FILE = "coco.txt";
+    private static String TF_OD_API_LABELS_FILE = MainActivity.TF_OD_API_LABELS_FILE;
 
     private static final DetectorMode MODE = DetectorMode.TF_OD_API;
     private static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.5f;
@@ -99,11 +114,17 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
         int cropSize = TF_OD_API_INPUT_SIZE;
 
         try {
+
+
+            FileInputStream fos = openFileInput(TF_OD_API_LABELS_FILE);
+            FileInputStream tf = openFileInput(TF_OD_API_MODEL_FILE);
             detector =
                     YoloV4Classifier.create(
                             getAssets(),
                             TF_OD_API_MODEL_FILE,
                             TF_OD_API_LABELS_FILE,
+                            fos,
+                            tf,
                             TF_OD_API_IS_QUANTIZED);
 //            detector = TFLiteObjectDetectionAPIModel.create(
 //                    getAssets(),
@@ -240,7 +261,6 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                     }
                 });
     }
-
     @Override
     protected int getLayoutId() {
         return R.layout.tfe_od_camera_connection_fragment_tracking;

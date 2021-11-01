@@ -32,8 +32,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 
 import static java.lang.System.exit;
@@ -41,6 +46,15 @@ import static java.lang.System.exit;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import cz.msebera.android.httpclient.HttpResponse;
+import cz.msebera.android.httpclient.NameValuePair;
+import cz.msebera.android.httpclient.client.ClientProtocolException;
+import cz.msebera.android.httpclient.client.HttpClient;
+import cz.msebera.android.httpclient.client.entity.UrlEncodedFormEntity;
+import cz.msebera.android.httpclient.client.methods.HttpPost;
+import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
+import cz.msebera.android.httpclient.message.BasicNameValuePair;
 
 public class ImageChoiceActivity extends AppCompatActivity {
     ArrayList array = new ArrayList(); // 그 이미지 어레이
@@ -61,6 +75,7 @@ public class ImageChoiceActivity extends AppCompatActivity {
     float my = 0;
     float mmx = 0;
     float mmy = 0;
+    int flag = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +103,9 @@ public class ImageChoiceActivity extends AppCompatActivity {
             System.out.println("아래가 urlarray");
             System.out.println(urlarray.get(0));
             jsonCreate();
+            while(flag == 0){
+
+            }
             System.exit(0);
         }
 
@@ -209,18 +227,18 @@ public class ImageChoiceActivity extends AppCompatActivity {
             bObj.put("buildingNameEng",eeditText.getText().toString());
             bObj.put("picCount", Integer.toString(narray.size()));
             //building obj 생성 완료
-            obj.put("buildingInfo",bObj); // 빌딩 Object 박아버림
+            obj.put("buildingInfo_idx",bObj); // 빌딩 Object 박아버림
             obj.put("pics",jArray); // 배열을 박아버림
-            System.out.println("아래가 obj");
-            System.out.println(obj.toString());
-//            JSONObject testjson = new JSONObject();
-//            try{
-//                urlStr = "http://ec2-13-124-11-51.ap-northeast-2.compute.amazonaws.com:3000/getInfo";
-//                RequestThread thread = new RequestThread();
-//                thread.start();
-//            }catch (Exception e) {
-//                e.printStackTrace();
-//            }
+//            System.out.println("아래가 obj");
+//            System.out.println(obj.toString());
+            JSONObject testjson = new JSONObject();
+            try{
+                urlStr = "http://ec2-13-124-11-51.ap-northeast-2.compute.amazonaws.com:3000/addObject/uploadData";
+                RequestThread thread = new RequestThread();
+                thread.start();
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
         }catch (JSONException e){
             e.printStackTrace();
         }
@@ -230,36 +248,77 @@ public class ImageChoiceActivity extends AppCompatActivity {
             try {
                 URL url = new URL(urlStr);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
                 if(conn != null){
+                    conn.setRequestProperty("Accept", "application/json");
+//                    conn.setRequestProperty("Content-type", "application/json");
+                    conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+//                    conn.setRequestProperty("Accept-Charset","UTF-8");
                     String json;
                     conn.setConnectTimeout(10000); // 10초 동안 기다린 후 응답이 없으면 종료
                     conn.setRequestMethod("POST");
+                    conn.setUseCaches(false);
                     conn.setDoInput(true);
                     conn.setDoOutput(true);
-                    OutputStream os = conn.getOutputStream();
-                    json = obj.toString();
-                    os.write(json.getBytes("euc-kr"));
-                    os.flush();
-//                    conn.setDoOutput(true);
-                    int resCode = conn.getResponseCode();
-                    System.out.println(resCode);
-                    if(resCode == HttpURLConnection.HTTP_OK){
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                        String line = null;
-                        println("sd?");
-                        while(true){
-                            line = reader.readLine();
-                            println(line);
-                            if(line == null)
-                                break;
-                        }
-                        reader.close();
-                    }else{
-                        println("외안되?");
+                    OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+                    wr.write(obj.toString());  //<--- sending data.
+                    System.out.println(obj.toString());
+
+                    wr.flush();
+
+                    //  Here you read any answer from server.
+                    BufferedReader serverAnswer = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                    String line;
+                    while ((line = serverAnswer.readLine()) != null) {
+
+                        System.out.println("LINE: " + line); //<--If any response from server
+                        //use it as you need, if server send something back you will get it here.
                     }
-                    conn.disconnect();
-                }
+
+                    wr.close();
+                    serverAnswer.close();
+
+
+////                    conn.setRequestProperty("content-type","application/x-www-form-urlencoded");
+//                    OutputStream os = conn.getOutputStream();
+//                    json = obj.toString();
+//                    os.write(json.getBytes("UTF-8"));
+//                    System.out.println("json"+json);
+////                    System.out.println(json);
+////                    StringBuffer buffer = new StringBuffer();
+////                    buffer.append(json);
+//
+////                    PrintWriter writer = new PrintWriter(outStream);
+////                    writer.write(buffer.toString());
+////                    System.out.println(buffer.toString());
+////                    System.out.println(buffer.toString());
+////                    writer.flush();
+//                    os.flush();
+//                    System.out.println("flush");
+//                    os.close();
+//                    System.out.println("close");
+////                    conn.setDoOutput(true);
+//                    int resCode = conn.getResponseCode();
+//                    System.out.println(resCode);
+//                    if(resCode == HttpURLConnection.HTTP_OK){
+//                        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+//                        String line = null;
+//                        println("sd?");
+//                        while(true){
+//                            line = reader.readLine();
+//                            println(line);
+//                            if(line == null)
+//                                break;
+//                        }
+//                        reader.close();
+//                    }else{
+//                        println("외안되?");
+//                    }
+//                    conn.disconnect();
+                    flag = 1;
+                }flag = 1;
             } catch (Exception e) {
+                flag =1;
                 e.printStackTrace();
             }
         }
