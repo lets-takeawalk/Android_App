@@ -124,7 +124,7 @@ public class ImageChoiceActivity extends AppCompatActivity {
 //        System.out.println(resize.getWidth()+" " +resize.getHeight());
 //        saveBitmapToJpg(resize,"imghyn");
         //416 416으로 저장
-        FirebaseStorage storage = FirebaseStorage.getInstance("gs://let-s-take-a-walk-76161.appspot.com");
+        FirebaseStorage storage = FirebaseStorage.getInstance("gs://takewalk-9d36a.appspot.com/");
         StorageReference storageReference = storage.getReference(narray.get(arrayCnt));
         storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override

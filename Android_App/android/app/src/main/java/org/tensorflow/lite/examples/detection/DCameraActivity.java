@@ -193,7 +193,7 @@ public class DCameraActivity extends AppCompatActivity {
                         Bitmap resize = Bitmap.createScaledBitmap(myBitmap,416,416,true);
                         Bitmap rotatedBitmap = Bitmap.createBitmap(resize,0,0,resize.getWidth(),resize.getHeight(),matrix,true); // 416,416 and rotate90
 
-                        FirebaseStorage storage = FirebaseStorage.getInstance("gs://let-s-take-a-walk-76161.appspot.com");
+                        FirebaseStorage storage = FirebaseStorage.getInstance("gs://takewalk-9d36a.appspot.com/");
 //                        FirebaseStorage storage = FirebaseStorage.getInstance("gs://takewalk-9d36a.appspot.com");
 
                         StorageReference storageRef = storage.getReference();

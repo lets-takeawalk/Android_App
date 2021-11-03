@@ -5,6 +5,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,10 +19,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.FileUtils;
 import android.os.Handler;
+import android.os.Looper;
+import android.text.Html;
+import android.text.Spanned;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -51,6 +58,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -61,21 +69,33 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     String urlStr;
+    String password;
+    String urlPst = "http://ec2-13-124-11-51.ap-northeast-2.compute.amazonaws.com:3000/client/checkAuthorization";
     Handler handler = new Handler();
+    int flag = 0;
     public static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.5f;
-    
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         String[] files = fileList();
         // 데이터 없으면 받아오기 
-        if(Arrays.asList(files).indexOf("yolov4-tiny-416.tflite")<0){
-            FirebaseStorage storage = FirebaseStorage.getInstance("gs://let-s-take-a-walk-76161.appspot.com");
-            StorageReference storageReference = storage.getReference("yolov4-tiny-416.tflite");
-            StorageReference labelReference = storage.getReference("label.txt");
-            StorageReference cocoReference = storage.getReference("coco.txt");
-            StorageReference versionReference = storage.getReference("version.txt");
+        if(Arrays.asList(files).indexOf("yolov4-tiny-416.tflite")<0 || Arrays.asList(files).indexOf("label.txt")<0 || Arrays.asList(files).indexOf("coco.txt")<0 || Arrays.asList(files).indexOf("version.txt")<0){
+            AlertDialog.Builder oDialog = new AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Light_Dialog_Alert);
+            String strHtml = "<b><font color='#ff0000'>설치중에 앱을 종료하지 말아주세요.</font>";
+            Spanned oHtml;
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N){
+                oHtml = Html.fromHtml(strHtml);
+            }else{
+                oHtml = Html.fromHtml(strHtml, Html.FROM_HTML_MODE_LEGACY);
+            }
+            oDialog.setTitle("파일이 없습니다.").setMessage(oHtml).setPositiveButton("OK",null).setCancelable(false).show();
+            FirebaseStorage storage = FirebaseStorage.getInstance("gs://takewalk-9d36a.appspot.com/");
+            StorageReference storageReference = storage.getReference("weight/yolov4-tiny-416.tflite");
+            StorageReference labelReference = storage.getReference("labels/label.txt");
+            StorageReference cocoReference = storage.getReference("labels/coco.txt");
+//            StorageReference versionReference = storage.getReference("version.txt");
             final long MB = 40000000;
 
             storageReference.getBytes(MB).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -150,30 +170,41 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("실패");
                 }
             });
-            versionReference.getBytes(MB).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-                @Override
-                public void onSuccess(byte[] bytes) {
-                    // Data for "images/island.jpg" is returns, use this as needed
-                    try {
-                        System.out.println("생성");
-                        FileOutputStream fos = openFileOutput("version.txt",MODE_PRIVATE);
-                        System.out.println("쓰기 시작");
-                        fos.write(bytes);
-                        System.out.println("종료");
-                        fos.close();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception exception) {
-                    // Handle any errors
-                    System.out.println("실패");
-                }
-            });
+            try {
+                FileOutputStream fos = openFileOutput("version.txt",MODE_PRIVATE);
+                String ver = "firstnum";
+                fos.write(ver.getBytes());
+                fos.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+//            versionReference.getBytes(MB).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+//                @Override
+//                public void onSuccess(byte[] bytes) {
+//                    // Data for "images/island.jpg" is returns, use this as needed
+//                    try {
+//                        System.out.println("생성");
+//                        FileOutputStream fos = openFileOutput("version.txt",MODE_PRIVATE);
+//                        System.out.println("쓰기 시작");
+//                        fos.write(bytes);
+//                        System.out.println("종료");
+//                        fos.close();
+//                    } catch (FileNotFoundException e) {
+//                        e.printStackTrace();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }).addOnFailureListener(new OnFailureListener() {
+//                @Override
+//                public void onFailure(@NonNull Exception exception) {
+//                    // Handle any errors
+//                    System.out.println("실패");
+//                }
+//            });
+
         }
         else{
 
@@ -184,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         try{
-            urlStr = "http://ec2-13-124-11-51.ap-northeast-2.compute.amazonaws.com:3000/getInfo";
+            urlStr = "http://ec2-13-124-11-51.ap-northeast-2.compute.amazonaws.com:3000/client/getInfo";
             RequestThread thread = new RequestThread();
             thread.start();
         }catch (Exception e) {
@@ -215,8 +246,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         detectButton.setOnClickListener(v -> {
-            Intent intent2 = new Intent(MainActivity.this,DCameraActivity.class);
-            startActivity(intent2);
+            String pass="";
+            showLoginDialog();
+
+
+
+
         });
         this.sourceBitmap = Utils.getBitmapFromAsset(MainActivity.this, "kite.jpg");
 
@@ -351,11 +386,35 @@ public class MainActivity extends AppCompatActivity {
                                     line = br.readLine();
                                     System.out.println(line+ "라 버" +  version_num);
                                     if (line.compareTo(version_num) != 0){
-                                        FirebaseStorage storage = FirebaseStorage.getInstance("gs://let-s-take-a-walk-76161.appspot.com");
-                                        StorageReference storageReference = storage.getReference("yolov4-tiny-416.tflite");
-                                        StorageReference labelReference = storage.getReference("label.txt");
-                                        StorageReference cocoReference = storage.getReference("coco.txt");
-                                        StorageReference versionReference = storage.getReference("version.txt");
+                                        Handler mHandler = new Handler(Looper.getMainLooper());
+
+                                        mHandler.postDelayed(new Runnable() {
+
+
+                                            @Override
+
+                                            public void run() {
+                                                AlertDialog.Builder oDialog = new AlertDialog.Builder(MainActivity.this, android.R.style.Theme_DeviceDefault_Light_Dialog_Alert);
+                                                String strHtml = "<b><font color='#ff0000'>설치중에 앱을 종료하지 말아주세요.</font>";
+                                                Spanned oHtml;
+                                                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N){
+                                                    oHtml = Html.fromHtml(strHtml);
+                                                }else{
+                                                    oHtml = Html.fromHtml(strHtml, Html.FROM_HTML_MODE_LEGACY);
+                                                }
+                                                oDialog.setTitle("새로운 버전이 있습니다.").setMessage(oHtml).setPositiveButton("OK",null).setCancelable(false).show();
+
+
+                                            }
+
+                                        }, 0);
+
+
+                                        FirebaseStorage storage = FirebaseStorage.getInstance("gs://takewalk-9d36a.appspot.com/");
+                                        StorageReference storageReference = storage.getReference("weight/yolov4-tiny-416.tflite");
+                                        StorageReference labelReference = storage.getReference("labels/label.txt");
+                                        StorageReference cocoReference = storage.getReference("labels/coco.txt");
+//                                        StorageReference versionReference = storage.getReference("version.txt");
                                         final long MB = 40000000;
 
                                         storageReference.getBytes(MB).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -430,30 +489,39 @@ public class MainActivity extends AppCompatActivity {
                                                 System.out.println("실패");
                                             }
                                         });
-                                        versionReference.getBytes(MB).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-                                            @Override
-                                            public void onSuccess(byte[] bytes) {
-                                                // Data for "images/island.jpg" is returns, use this as needed
-                                                try {
-                                                    System.out.println("생성_업뎃");
-                                                    FileOutputStream fos = openFileOutput("version.txt",MODE_PRIVATE);
-                                                    System.out.println("쓰기 시작");
-                                                    fos.write(bytes);
-                                                    System.out.println("종료");
-                                                    fos.close();
-                                                } catch (FileNotFoundException e) {
-                                                    e.printStackTrace();
-                                                } catch (IOException e) {
-                                                    e.printStackTrace();
-                                                }
-                                            }
-                                        }).addOnFailureListener(new OnFailureListener() {
-                                            @Override
-                                            public void onFailure(@NonNull Exception exception) {
-                                                // Handle any errors
-                                                System.out.println("실패");
-                                            }
-                                        });
+//                                        versionReference.getBytes(MB).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+//                                            @Override
+//                                            public void onSuccess(byte[] bytes) {
+//                                                // Data for "images/island.jpg" is returns, use this as needed
+//                                                try {
+//                                                    System.out.println("생성_업뎃");
+//                                                    FileOutputStream fos = openFileOutput("version.txt",MODE_PRIVATE);
+//                                                    System.out.println("쓰기 시작");
+//                                                    fos.write(bytes);
+//                                                    System.out.println("종료");
+//                                                    fos.close();
+//                                                } catch (FileNotFoundException e) {
+//                                                    e.printStackTrace();
+//                                                } catch (IOException e) {
+//                                                    e.printStackTrace();
+//                                                }
+//                                            }
+//                                        }).addOnFailureListener(new OnFailureListener() {
+//                                            @Override
+//                                            public void onFailure(@NonNull Exception exception) {
+//                                                // Handle any errors
+//                                                System.out.println("실패");
+//                                            }
+//                                        });
+                                        try {
+                                            FileOutputStream fos = openFileOutput("version.txt",MODE_PRIVATE);
+                                            fos.write(version_num.getBytes());
+                                            fos.close();
+                                        } catch (FileNotFoundException e) {
+                                            e.printStackTrace();
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
                                     }
 
                                 } catch (JSONException | FileNotFoundException e) {
@@ -486,5 +554,106 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void showLoginDialog() {
+        LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LinearLayout loginLayout = (LinearLayout) vi.inflate(R.layout.pass, null);
+        final EditText pw = (EditText)loginLayout.findViewById(R.id.pw);
 
+        new AlertDialog.Builder(this).setTitle("관리자 권한 실행").setView(loginLayout).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this, "@nPW : " + pw.getText().toString(), Toast.LENGTH_SHORT).show();
+                password = pw.getText().toString();
+                RequestPost thread2 = new RequestPost();
+                thread2.start();
+
+            }
+        }).show();
+
+    }
+    private class RequestPost extends Thread{
+        public void run() {
+            try {
+                URL url = new URL(urlPst);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                JSONObject obj = new JSONObject();
+                if(conn != null){
+                    conn.setRequestProperty("Accept", "application/json");
+//                    conn.setRequestProperty("Content-type", "application/json");
+                    conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+//                    conn.setRequestProperty("Accept-Charset","UTF-8");
+                    String json;
+                    conn.setConnectTimeout(10000); // 10초 동안 기다린 후 응답이 없으면 종료
+                    conn.setRequestMethod("POST");
+                    conn.setUseCaches(false);
+                    conn.setDoInput(true);
+                    conn.setDoOutput(true);
+                    OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+                    obj.put("key",password);
+                    wr.write(obj.toString());  //<--- sending data.
+                    System.out.println(obj.toString());
+
+                    wr.flush();
+
+                    //  Here you read any answer from server.
+                    BufferedReader serverAnswer = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                    String line;
+                    while ((line = serverAnswer.readLine()) != null) {
+                        JSONObject jsonObject = new JSONObject(line);
+                        String code = jsonObject.getString("code");
+                        if (code.equals("200")){
+                            Intent intent2 = new Intent(MainActivity.this,DCameraActivity.class);
+                            startActivity(intent2);
+                        }
+                        System.out.println("LINE: " + line); //<--If any response from server
+                        //use it as you need, if server send something back you will get it here.
+                    }
+
+                    wr.close();
+                    serverAnswer.close();
+
+
+////                    conn.setRequestProperty("content-type","application/x-www-form-urlencoded");
+//                    OutputStream os = conn.getOutputStream();
+//                    json = obj.toString();
+//                    os.write(json.getBytes("UTF-8"));
+//                    System.out.println("json"+json);
+////                    System.out.println(json);
+////                    StringBuffer buffer = new StringBuffer();
+////                    buffer.append(json);
+//
+////                    PrintWriter writer = new PrintWriter(outStream);
+////                    writer.write(buffer.toString());
+////                    System.out.println(buffer.toString());
+////                    System.out.println(buffer.toString());
+////                    writer.flush();
+//                    os.flush();
+//                    System.out.println("flush");
+//                    os.close();
+//                    System.out.println("close");
+////                    conn.setDoOutput(true);
+//                    int resCode = conn.getResponseCode();
+//                    System.out.println(resCode);
+//                    if(resCode == HttpURLConnection.HTTP_OK){
+//                        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+//                        String line = null;
+//                        println("sd?");
+//                        while(true){
+//                            line = reader.readLine();
+//                            println(line);
+//                            if(line == null)
+//                                break;
+//                        }
+//                        reader.close();
+//                    }else{
+//                        println("외안되?");
+//                    }
+//                    conn.disconnect();
+                    flag = 1;
+                }flag = 1;
+            } catch (Exception e) {
+                flag =1;
+                e.printStackTrace();
+            }
+        }
+    }
 }
